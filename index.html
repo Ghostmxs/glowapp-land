@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="GlowApp — ИИ-фотосессии, редактирование фото и создание видео прямо в мессенджере. Без камеры, без студии, без фотографа.">
+  <meta property="og:title" content="GlowApp — Твоя ИИ-фотостудия">
+  <meta property="og:description" content="Профессиональные фото и видео за минуту. Просто отправь своё фото боту.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://glowapp.ru">
+  <title>GlowApp — Твоя ИИ-фотостудия</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Loading screen -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__logo">
+      <span class="loader__text">Glow</span><span class="loader__text loader__text--accent">App</span>
+      <div class="loader__bar"><div class="loader__progress"></div></div>
+    </div>
+  </div>
+
+  <!-- Custom cursor (desktop only) -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor cursor--trail" id="cursor-trail" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="/" class="header__logo">Glow<span>App</span></a>
+      <nav class="header__nav" id="nav">
+        <a href="#how" class="header__link">Как это работает</a>
+        <a href="#features" class="header__link">Возможности</a>
+        <a href="#why" class="header__link">Преимущества</a>
+      </nav>
+      <a href="#start" class="btn btn--small btn--accent header__cta">Попробовать</a>
+      <button class="header__burger" id="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero__glow" aria-hidden="true">
+      <div class="hero__orb hero__orb--1"></div>
+      <div class="hero__orb hero__orb--2"></div>
+      <div class="hero__orb hero__orb--3"></div>
+    </div>
+    <div class="hero__mouse-glow" id="mouse-glow" aria-hidden="true"></div>
+    <div class="hero__grain" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <p class="hero__badge"><span class="hero__badge-dot"></span>Фотостудия в кармане</p>
+      <h1 class="hero__title hero-enter">Профессиональные фото<br><span class="text-gradient">без фотографа</span></h1>
+      <p class="hero__subtitle hero-enter">Отправьте своё фото — получите студийный результат за&nbsp;минуту. Фотосессии, ретушь и видео на&nbsp;базе ИИ прямо в&nbsp;мессенджере.</p>
+      <div class="hero__actions hero-enter">
+        <a href="#" class="btn btn--accent btn--lg btn--glow" id="link-max-hero" target="_blank" rel="noopener noreferrer">
+          <svg width="20" height="20" viewBox="0 0 42 42" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M21.47 41.88c-4.11 0-6.02-.6-9.34-3-2.1 2.7-8.75 4.81-9.04 1.2 0-2.71-.6-5-1.28-7.5C1 29.5.08 26.07.08 21.1.08 9.23 9.82.3 21.36.3c11.55 0 20.6 9.37 20.6 20.91a20.6 20.6 0 0 1-20.49 20.67Zm.17-31.32c-5.62-.29-10 3.6-10.97 9.7-.8 5.05.62 11.2 1.83 11.52.58.14 2.04-1.04 2.95-1.95a10.4 10.4 0 0 0 5.08 1.81 10.7 10.7 0 0 0 11.19-9.97 10.7 10.7 0 0 0-10.08-11.1Z" clip-rule="evenodd"/></svg>
+          Открыть в Max
+        </a>
+        <a href="#" class="btn btn--outline btn--lg" id="link-tg-hero" target="_blank" rel="noopener noreferrer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          Telegram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span class="marquee__item">Фотосессии</span>
+      <span class="marquee__sep"></span>
+      <span class="marquee__item">Ретушь</span>
+      <span class="marquee__sep"></span>
+      <span class="marquee__item">Видео</span>
+      <span class="marquee__sep"></span>
+      <span class="marquee__item">Генерация</span>
+      <span class="marquee__sep"></span>
+      <span class="marquee__item">Портреты</span>
+      <span class="marquee__sep"></span>
+      <span class="marquee__item">Фон</span>
+      <span class="marquee__sep"></span>
+      <span class="marquee__item">Аватары</span>
+      <span class="marquee__sep"></span>
+      <span class="marquee__item">Клипы</span>
+      <span class="marquee__sep"></span>
+      <!-- Duplicate for seamless loop -->
+      <span class="marquee__item">Фотосессии</span>
+      <span class="marquee__sep"></span>
+      <span class="marquee__item">Ретушь</span>
+      <span class="marquee__sep"></span>
+      <span class="marquee__item">Видео</span>
+      <span class="marquee__sep"></span>
+      <span class="marquee__item">Генерация</span>
+      <span class="marquee__sep"></span>
+      <span class="marquee__item">Портреты</span>
+      <span class="marquee__sep"></span>
+      <span class="marquee__item">Фон</span>
+      <span class="marquee__sep"></span>
+      <span class="marquee__item">Аватары</span>
+      <span class="marquee__sep"></span>
+      <span class="marquee__item">Клипы</span>
+      <span class="marquee__sep"></span>
+    </div>
+  </div>
+
+  <!-- How it works -->
+  <section class="section" id="how">
+    <div class="container">
+      <h2 class="section__title">Три шага до идеального фото</h2>
+      <p class="section__subtitle">Никаких студий, освещения и позирования. Всё, что нужно&nbsp;— ваш телефон.</p>
+      <div class="steps">
+        <div class="step fade-in" style="--delay:0">
+          <div class="step__number">01</div>
+          <h3 class="step__title">Выберите стиль</h3>
+          <p class="step__text">Деловой портрет, романтическая фотосессия, семейное фото или&nbsp;что-то совершенно уникальное.</p>
+        </div>
+        <div class="step fade-in" style="--delay:1">
+          <div class="step__number">02</div>
+          <h3 class="step__title">Загрузите фото</h3>
+          <p class="step__text">Отправьте боту своё фото — подойдёт даже обычное селфи. ИИ сохранит ваше лицо с&nbsp;точностью до&nbsp;деталей.</p>
+        </div>
+        <div class="step fade-in" style="--delay:2">
+          <div class="step__number">03</div>
+          <h3 class="step__title">Получите результат</h3>
+          <p class="step__text">Через минуту — готовое студийное фото. Делитесь в&nbsp;соцсетях, ставьте на&nbsp;аватар, печатайте.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section section--dark" id="features">
+    <div class="container">
+      <h2 class="section__title">Всё, что может фотостудия.<br>И даже больше.</h2>
+      <div class="features">
+        <div class="feature fade-in" style="--delay:0">
+          <div class="feature__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <h3 class="feature__title">Фотосессии</h3>
+          <p class="feature__text">Десятки стилей: деловые, романтические, семейные, парные, детские. Как настоящая съёмка — но без студии.</p>
+        </div>
+        <div class="feature fade-in" style="--delay:1">
+          <div class="feature__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m15 4 3 3L8 17H5v-3L15 4z"/><path d="m18 7 3-3-3-3-3 3"/><path d="m2 22 2-2"/><path d="m19 15 3 3"/><path d="m22 19-3 3"/></svg></div>
+          <h3 class="feature__title">Редактирование</h3>
+          <p class="feature__text">Уберите лишнее, измените фон, улучшите внешность. Профессиональная ретушь за&nbsp;секунды.</p>
+        </div>
+        <div class="feature fade-in" style="--delay:2">
+          <div class="feature__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></div>
+          <h3 class="feature__title">Видео</h3>
+          <p class="feature__text">Оживите любое фото, создайте трендовый ролик или&nbsp;клип. Ваш контент — в&nbsp;движении.</p>
+        </div>
+        <div class="feature fade-in" style="--delay:3">
+          <div class="feature__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+          <h3 class="feature__title">Генерация</h3>
+          <p class="feature__text">Создайте изображение с&nbsp;нуля по&nbsp;описанию. Любая идея — воплощена в&nbsp;пикселях.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why us -->
+  <section class="section" id="why">
+    <div class="container">
+      <h2 class="section__title">Почему GlowApp</h2>
+      <div class="advantages">
+        <div class="advantage fade-in" style="--delay:0">
+          <div class="advantage__accent"></div>
+          <h3 class="advantage__title">Быстро</h3>
+          <p class="advantage__text">Результат за&nbsp;минуту. Не нужно ехать в&nbsp;студию, ждать обработку или&nbsp;согласовывать время.</p>
+        </div>
+        <div class="advantage fade-in" style="--delay:1">
+          <div class="advantage__accent"></div>
+          <h3 class="advantage__title">Просто</h3>
+          <p class="advantage__text">Работает прямо в&nbsp;Max и&nbsp;Telegram. Не нужно скачивать приложения или&nbsp;разбираться в&nbsp;интерфейсах.</p>
+        </div>
+        <div class="advantage fade-in" style="--delay:2">
+          <div class="advantage__accent"></div>
+          <h3 class="advantage__title">Точно</h3>
+          <p class="advantage__text">ИИ сохраняет ваше лицо 1:1. Никаких «похожих на вас» людей — это вы, только в&nbsp;идеальном кадре.</p>
+        </div>
+        <div class="advantage fade-in" style="--delay:3">
+          <div class="advantage__accent"></div>
+          <h3 class="advantage__title">Доступно</h3>
+          <p class="advantage__text">Дешевле любой фотосессии. Платите только за&nbsp;результат, без предоплат и&nbsp;абонементов.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--cta" id="start">
+    <div class="container cta__inner">
+      <h2 class="cta__title">Попробуйте прямо сейчас</h2>
+      <p class="cta__text">Откройте бота, отправьте фото — и&nbsp;увидите результат через минуту. Бесплатная первая генерация.</p>
+      <div class="hero__actions">
+        <a href="#" class="btn btn--accent btn--lg btn--glow" id="link-max-cta" target="_blank" rel="noopener noreferrer">
+          <svg width="20" height="20" viewBox="0 0 42 42" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M21.47 41.88c-4.11 0-6.02-.6-9.34-3-2.1 2.7-8.75 4.81-9.04 1.2 0-2.71-.6-5-1.28-7.5C1 29.5.08 26.07.08 21.1.08 9.23 9.82.3 21.36.3c11.55 0 20.6 9.37 20.6 20.91a20.6 20.6 0 0 1-20.49 20.67Zm.17-31.32c-5.62-.29-10 3.6-10.97 9.7-.8 5.05.62 11.2 1.83 11.52.58.14 2.04-1.04 2.95-1.95a10.4 10.4 0 0 0 5.08 1.81 10.7 10.7 0 0 0 11.19-9.97 10.7 10.7 0 0 0-10.08-11.1Z" clip-rule="evenodd"/></svg>
+          Открыть в Max
+        </a>
+        <a href="#" class="btn btn--outline btn--lg" id="link-tg-cta" target="_blank" rel="noopener noreferrer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          Telegram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="/" class="header__logo">Glow<span>App</span></a>
+          <p class="footer__tagline">ИИ-фотостудия в&nbsp;мессенджере</p>
+        </div>
+        <div class="footer__links">
+          <div class="footer__col">
+            <h4 class="footer__heading">Сервис</h4>
+            <a href="#" class="footer__link" id="link-max-footer">Max-бот</a>
+            <a href="#" class="footer__link" id="link-tg-footer">Telegram-бот</a>
+          </div>
+          <div class="footer__col">
+            <h4 class="footer__heading">Документы</h4>
+            <a href="terms/" class="footer__link">Пользовательское соглашение</a>
+            <a href="privacy/" class="footer__link">Политика конфиденциальности</a>
+          </div>
+          <div class="footer__col">
+            <h4 class="footer__heading">Контакты</h4>
+            <a href="#" class="footer__link" id="link-email-footer"></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__legal">
+          <p>ИП Ханин Кирилл Русланович</p>
+          <p>ИНН 611904153140 &middot; ОГРНИП 325619600062361</p>
+        </div>
+        <p class="footer__copy">&copy; <span id="year"></span> GlowApp. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
