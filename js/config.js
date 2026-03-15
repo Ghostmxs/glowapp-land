@@ -4,7 +4,7 @@
  */
 const CONFIG = {
   telegram: 'https://t.me/Glowapprubot',
-  max: 'https://t.me/Glowapprubot',
+  max: 'https://max.ru/id611904153140_1_bot',
   email: 'support@glowapp.ru',
   domain: 'glowapp.ru',
 };
